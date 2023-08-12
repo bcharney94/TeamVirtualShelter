@@ -1,41 +1,22 @@
 package pets_amok;
 
-public class RoboCat extends Pet implements RoboPet {
-    private int oilLevel;
+public class RoboCat extends RoboPet {
 
-    public int getOilLevel() {
-        return oilLevel;
-    }
-
-    public RoboCat(int keyValue, String species, String name, int happiness, int hygiene, int oilLevel, int energy,
-            int health) {
-        super(keyValue, " RoboCat ", name, happiness, hygiene, energy, health);
-        // TODO Auto-generated constructor stub
+    public RoboCat(String name) {
+        super( "RoboCat", name);
+        
     }
 
     @Override
-    public void oilRoboPet() {
-        this.oilLevel += 8;
-        this.hygiene -= 4;
-        this.happiness += 6;
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'oilRoboPet'");
+    public void walk() {
+        System.out.println( name + " says, \"You can only take the dogs for a walk!\"");
+
     }
 
-    @Override
-    public void chargeRoboPet() {
-        this.energy += 11;
-        this.happiness += 6;
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'chargeRoboPet'");
+    
+        
     }
 
-    @Override
-    public void polishRoboPet() {
-        this.hygiene += 8;
-        this.happiness += 6;
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'polishRoboPet'");
-    }
+    
+    
 
-}
